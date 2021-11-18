@@ -1,0 +1,79 @@
+/* STATUS COLOR */
+.btn.unread, .status.unread {
+    background-color: #dce822 !important;
+    color: white;
+}
+
+.btn.pending, .status.pending {
+    background-color: palevioletred !important;
+    color: white;
+}
+
+.btn.confirmed, .status.confirmed {
+    background-color: paleturquoise !important;
+    color: white;
+}
+
+.btn.canceled, .status.canceled {
+    background-color: #2c2c2c !important;
+    color: white;
+}
+
+.reservationBox .btn.status.unread:hover {
+    border: solid 1px #d8e703 !important;
+}
+
+.reservationBox .btn.status.pending:hover {
+    border: solid 1px #d35e85 !important;
+}
+
+.reservationBox .btn.status.confirmed:hover {
+    border: solid 1px #49f0f0 !important;
+}
+
+.reservationBox .btn.status.canceled:hover {
+    border: solid 1px #000 !important;
+}
+
+
+/* MESSAGE - ALERT */
+h2.success i.closeBtn {
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+h2.no-result {
+    background-color: tomato;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+.success {
+    background-color: paleturquoise;
+    color: #fff;
+    font-size: 2rem;
+    padding: .5rem .5rem .5rem 1rem;
+    margin: 0 0 2rem;
+    position: relative;
+}
+
+.success.hide {
+    display: none;
+}
+
+.result {
+    border-bottom: solid 3px #000;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+/* .alert {
+    background-color: tomato;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+} */

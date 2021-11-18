@@ -1,0 +1,499 @@
+body {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.today {
+    height: 50%;
+    border-bottom: .1rem solid #ddd;
+    overflow-y: scroll;
+}
+
+.today h1 {
+    height: 20%;
+}
+
+.main h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.reservationBox {
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.name {
+    max-width: 20rem;
+}
+
+/* table for index page */
+.index-box {
+    width: 80%;
+    max-height: 80%;
+}
+
+
+.reservationBox table{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    color: #2c2c2c;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.reservationBox .btn.details, .reservationBox .btn.status {
+    width: auto;
+    padding: .3rem 1rem;
+    margin: .5rem auto;
+    font-size: 1.6rem;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.reservationBox .btn.status {
+    width: 12rem;
+}
+
+.reservationBox table tr {
+    margin-top: 2rem;
+    vertical-align: inherit;
+}
+
+.reservation {
+    display: flex;
+}
+
+.icon {
+    width: 50%;
+    font-size: 2rem;
+    text-align: center;
+    color: #5d5d5d;
+    height: 100%;
+    padding-top: 2%;
+}
+
+.icon i {
+    display: block;
+    font-size: 10rem;
+    margin: 2rem;
+    color: #aaa;
+}
+
+.icon .new {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem 0;
+    border-radius: 50%;
+    background-color: #dce822;
+    color: #fff;
+    position: relative;
+    top: -16rem;
+    right: -56%;
+    border: .1rem solid #fff;
+}
+
+.small {
+    color: #ccc !important;
+    font-size: 1.3rem !important;
+}
+
+/* ALL RESERVATION */ 
+tr.read {
+    background-color: #f5f5f5;
+}
+
+th select.th-select {
+    color: #5d5d5d;
+    border: none !important;
+    margin-bottom: 0;
+}
+
+th select.th-select.date {
+    width: 12rem;
+}
+
+th select.th-select option {
+    text-align: center;
+}
+
+td .fa-circle, th .fa-circle {
+    color: #dce822;
+    font-size: 1rem;
+}
+
+h1.no-data {
+    text-decoration: underline;
+    margin-top: 4rem !important;
+}
+
+.search ~ .reservationBox h2.no-result.filtered {
+    margin-bottom: 2rem;
+}
+
+/* DETAILS.PHP */ 
+table.mail-contents {
+    margin: 2rem 1rem;
+}
+
+table.mail-contents, table.mail tr {
+    border: none !important;
+}
+
+td.label {
+    text-align: right;
+    padding: 0 3rem 0.8rem 0;
+    color: #5d5d5d;
+    width: 25rem;
+}
+
+td.contents {
+    text-align: left;
+    padding-bottom: 0.8rem;
+}
+
+.attention {
+    color: #dce822;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+.editBtnContainer {
+    text-align: center;
+}
+
+.editBtnContainer .btn {
+    padding: 1rem 2rem;
+}
+
+a.btn {
+    display: inline-block;
+}
+
+th .fa-flag {
+    color: #5d5d5d;
+}
+
+tbody .fa-flag {
+    color: #aaa;
+}
+
+i.fas.fa-flag.active {
+    color: red;
+}
+
+.reservationDetails {
+    display: flex;
+    flex-direction: row;
+    margin: 3rem 0 5rem;
+    width: 100%;
+    height: 55%;
+    border-top: solid 1px #aaa;
+    border-bottom: solid 1px #aaa;
+}
+.anotherReservation {
+    width: 40%;
+    height: 100%;
+    border-right: solid 1px #aaa;
+    font-size: 1.6rem;
+}
+
+.anotherReservation ul {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.anotherReservation .date {
+    height: 4.5rem;
+    font-weight: 900;
+    padding: 1.5rem;
+    color: #2c2c2c;
+    border-bottom: solid 1px #aaa;
+    background-color: #eee;
+}
+
+.anotherReservation li.selected {
+    border: solid .1rem tomato;
+}
+
+.anotherReservation .list-container {
+    display: flex;
+    border-bottom: solid .1rem #ddd;
+}
+
+.list-container .details {
+    width: 70%;
+    margin: 2rem;
+}
+
+.list-container .fa-exclamation {
+    color: #dce822;
+}
+
+/* DETAILS */
+.details p {
+    padding: .5rem 2rem .5rem 0;
+    color: #5d5d5d;
+
+}
+
+.list-container .details div{
+    display: flex;
+}
+
+.list-container .status {
+    width: 30%;
+    text-align: center;
+    padding: 10% 0;
+    opacity: 0.8;
+}
+
+.anotherReservation li.date i.fa-caret-down.dropdown2 {
+    display: none;
+}
+
+.mail {
+    width: 60%;
+    padding: 2rem 5rem;
+    position: relative;
+    color: #2c2c2c;
+    font-size: 1.8rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.mail-header .status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 8rem;
+    width: 15rem;
+    padding: 2.5rem 0;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 2.5rem;
+}
+
+table.small {
+    border: none !important;
+}
+
+table.small tr:first-child {
+    width: 15rem;
+}
+
+.contents.comment {
+    width: 25rem;
+} 
+
+.mail-header .row .fa-flag {
+    color: #aaa;
+    margin-right: 2rem;
+}
+
+.down {
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    height: 5rem;
+    font-size: 5rem;
+    color: #5d5d5d;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.down.hide {
+    display: none;
+}
+
+.down i {
+    text-align: center;
+    display: block;
+}
+
+.mail-header form.status {
+    cursor: pointer;
+}
+
+input.hide {
+    display: none;
+}
+
+/* ADD RESERVATION */
+.message.hide {
+    display: none;
+}
+
+form#add {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-group {
+    font-size: 2rem;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+form label {
+    color: #5d5d5d;
+    margin-bottom: 1rem;
+}
+
+form label.short {
+    width: 10rem;
+    display: inline-block;
+}
+
+form label.long {
+    width: 20rem;
+    display: block;
+    margin-top: 3rem;
+}
+
+#add input, #add select {
+    width: calc(100% - 12rem);
+}
+
+input, select {
+    border: none;
+    border-bottom: 0.1rem solid #ddd;
+    border-radius: 0.3rem;
+    padding: 1rem 2rem 0.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+input.short, select.short {
+    width: 45%;
+    display: inline-block;
+}
+
+#add input[type=checkbox], input[type=radio] {
+    margin: 0 0.5rem;
+    width: auto !important;
+}
+
+.form-group a {
+    font-size: 1.5rem;
+}
+
+textarea {
+    width: 100%;
+    height: 10rem;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+}
+
+.row {
+    display: flex;
+}
+
+.form-group .row {
+    justify-content: space-between;
+}
+
+form#add input.btn {
+    background-color: #fff;
+    width: 50%;
+    margin: 2rem 25%;
+    padding: 1rem;
+} 
+
+.checkboxlabel {
+    width: 8rem;
+    display: inline-block;
+    color: #000;
+    font-size: 1.6rem;
+}
+
+.checkbox-container .row {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.checkbox-container input[type=checkbox] {
+    width: 5rem;
+}
+
+.radioBtnContainer {
+    width: 32%;
+    display: inline-block;
+}
+
+#date, #time option, #seats option, #status option {
+    text-align: center;
+}
+
+/* SEARCH */
+.search ~ .back {
+    margin-top: 0;
+}
+.back {
+    font-size: 1.5rem;
+    margin: 4rem 0 1rem 1rem;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+/* SEARCH DETAILS */
+#backToSearch input:read-only {
+    display: none;
+}
+
+#backToSearch .back {
+    display: flex;
+    margin: 4rem 0 1rem 1rem;
+    font-size: 1.5rem;
+}
+
+#backToSearch .back input{
+    display: block;
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 0.5rem;
+    cursor: pointer;
+}
+
+#backToSearch .back input:hover {
+    text-decoration: underline;
+}
+
+/* EDIT_RESERVATION.PHP */
+.success > a.check {
+    color:#fff;
+    display: inline-block;
+    padding-left: 1rem;
+    text-decoration: underline;
+}
+
+/* COMING_SOON.PHP */
+.coming {
+    height: 60%;
+    margin-top: 10%;
+}
+
+
+/* footer */
+footer .copyright{
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+footer.fixed {
+    position: fixed;
+    bottom: 0;
+}
